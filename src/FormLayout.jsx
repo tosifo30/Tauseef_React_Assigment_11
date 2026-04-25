@@ -75,13 +75,12 @@ export default function FormLayout() {
       alert("Registration Successful");
       console.log(formData);
 
-    setFormData(formObject)
   };
 
   const isFormValid = Object.keys(errors).length === 0;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-sky-300 to-sky-100 p-5">
+    <div className="min-h-screen flex items-center justify-center bg-sky-600 p-5">
 
       <form
         onSubmit={handleSubmit}
@@ -166,6 +165,18 @@ export default function FormLayout() {
           Register
         </button>
       </form>
+
+        <div className="w-[400px] h-[200px] border p-2 bg-white font-semibold    ">
+          <p><span className="text-sky-500">Name</span> : {formData.name}</p>
+          <p><span className="text-sky-500">Email</span>  : {formData.email}</p>
+          <p><span className="text-sky-500">Password</span>  : {formData.password}</p>
+          <p><span className="text-sky-500">Gender</span>  : {formData.gender}</p>
+        </div>
+
+
+
+
+
     </div>
   );
 }
